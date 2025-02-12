@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./src/ico/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+    <script src="./src/script.js" defer></script>
+    <title>Formulář</title>
+  </head>
+
+  <body
+    class="h-screen flex flex-col items-center justify-center gap-20 bg-slate-400"
+  >
+    <!-- nadpis -->
+    <h1 class="text-3xl text-center uppercase pt-10">Registrační formulář</h1>
+
+    <!-- formulář - flex/hidden -->
+    <form class="flex flex-col items-center font-mono gap-2 flex-1" id="form">
+      <!-- name err -->
+      <p id="nameErr" class="text-red-700 hidden">*zkontroluj jméno!</p>
+      <!-- name fill -->
+      <input
+        type="text"
+        name="name"
+        placeholder="Jméno"
+        class="focus:bg-[#E8F0FE] w-64 border rounded-md bg-slate-400 p-1"
+        autocomplete="on"
+      />
+      <!-- surname err -->
+      <p id="surnameErr" class="text-red-700 hidden">*zkontroluj příjmení!</p>
+      <!-- surname fill -->
+      <input
+        type="text"
+        name="surname"
+        placeholder="Příjmení"
+        class="focus:bg-[#E8F0FE] w-64 rounded-md border bg-slate-400 p-1"
+        autocomplete="on"
+      />
+      <!-- pass err -->
+      <p id="passErr" class="text-red-700 hidden">
+        *heslo musí obsahovat malé, velké písmeno a číslici!
+      </p>
+      <!-- pass fill -->
+      <input
+        type="password"
+        name="password1"
+        placeholder="Heslo"
+        class="focus:bg-[#E8F0FE] w-64 rounded-md border bg-slate-400 p-1"
+        autocomplete="off"
+      />
+      <!-- pass valid err -->
+      <p id="passValidErr" class="text-red-700 hidden">*hesla se neshodují</p>
+      <!-- pass valid fill -->
+      <input
+        type="password"
+        name="password2"
+        placeholder="Zopakuj heslo"
+        class="focus:bg-[#E8F0FE] w-64 rounded-md border bg-slate-400 p-1"
+        autocomplete="off"
+      />
+      <!-- email err -->
+      <p id="emailErr" class="text-red-700 hidden">*chybný formát emailu!</p>
+      <!-- email fill -->
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        class="focus:bg-[#E8F0FE] w-64 rounded-md border bg-slate-400 p-1"
+        autocomplete="Email"
+      />
+
+      <!-- button odeslat -->
+      <button
+        type="button"
+        class="w-32 mt-4 py-2 rounded-2xl border hover:cursor-pointer hover:bg-amber-500 hover:scale-110 active:bg-amber-600 active:scale-100 transition-all ease-initial duration-300"
+      >
+        odeslat
+      </button>
+      <!-- button reset -->
+      <button
+        type="reset"
+        class="w-32 py-2 rounded-2xl border hover:cursor-pointer hover:bg-amber-500 hover:scale-110 active:bg-amber-600 active:scale-100 transition-all ease-initial duration-300"
+      >
+        reset
+      </button>
+      <!-- button zpět -->
+      <a
+        href="index.html"
+        class="w-32 py-2 text-center rounded-2xl border hover:cursor-pointer hover:bg-amber-500 hover:scale-110 active:bg-amber-600 active:scale-100 transition-all ease-initial duration-300"
+        >zpět</a
+      >
+    </form>
+
+    <!-- výpis na stránku true || false -->
+    <section
+      id="ok"
+      class="hidden flex-col flex-1 items-center justify-center gap-14"
+    >
+      <h2 class="uppercase">díky za vyplnění</h2>
+      <!-- button main page -->
+      <a
+        href="index.html"
+        class="w-32 py-2 text-center rounded-2xl border hover:cursor-pointer hover:bg-amber-500 hover:scale-110 active:bg-amber-600 active:scale-100 transition-all ease-initial duration-300"
+        >main page</a
+      >
+    </section>
+    <footer class="w-full border-t-2 border-t-amber-900 py-2">
+      <a
+        href="https://github.com/Tomas-1979"
+        target="_blank"
+        class="text-center text-lg hover:underline hover:text-amber-900"
+        ><p>MOUCHA &copy; 2025</p></a
+      >
+    </footer>
+  </body>
+</html>
